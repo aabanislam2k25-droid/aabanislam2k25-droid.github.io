@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fairway Verdict — Honest Golf Gear Reviews</title>
+<meta name="description" content="Independent reviews of drivers, irons, putters, balls, wedges and more — tested notes to help you buy the right golf gear.">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2536967445389187" crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLZM557V9C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PLZM557V9C');
+</script>
+
+<style>
+  :root{
+    --turf: #1F3A2E;
+    --turf-dark: #142720;
+    --cream: #F3EFE3;
+    --sand: #E4DCC3;
+    --clay: #B5651D;
+    --gold: #A9862F;
+    --ink: #1B1B16;
+    --line: rgba(27,27,22,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family: "Iowan Old Style","Palatino Linotype",Georgia,serif;
+    line-height:1.5;
+  }
+  h1,h2,h3, .display{
+    font-family: "Iowan Old Style","Palatino Linotype",Georgia,serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .nav-font, .meta, button, .btn, .tag{
+    font-family: "Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* Header */
+  header{
+    background:var(--turf);
+    color:var(--cream);
+  }
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 28px;
+    max-width:1120px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:baseline; gap:10px;
+  }
+  .brand .mark{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--cream);
+    position:relative;
+    flex:none;
+  }
+  .brand .mark::after{
+    content:"";
+    position:absolute; inset:7px;
+    background-image:
+      radial-gradient(circle at 30% 30%, var(--turf) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 65% 20%, var(--turf) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 50% 55%, var(--turf) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 20% 65%, var(--turf) 1.4px, transparent 1.5px),
+      radial-gradient(circle at 75% 65%, var(--turf) 1.4px, transparent 1.5px);
+  }
+  .brand .name{
+    font-size:22px;
+    letter-spacing:-0.02em;
+  }
+  .brand .name em{font-style:normal; color:var(--gold);}
+
+  nav.primary{
+    display:flex; gap:26px;
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:14.5px;
+  }
+  nav.primary a{
+    opacity:0.88;
+    border-bottom:1px solid transparent;
+    padding-bottom:3px;
+  }
+  nav.primary a:hover{opacity:1; border-color:var(--gold);}
+
+  @media (max-width:760px){
+    nav.primary{display:none;}
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--turf);
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+    border-bottom:6px solid var(--gold);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 68px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1120px; margin:0 auto;
+    padding:76px 28px 84px;
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+    position:relative;
+  }
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr; padding:56px 24px 60px;}
+  }
+  .hero h1{
+    font-size:clamp(38px,5.2vw,60px);
+    line-height:1.04;
+  }
+  .hero .lede{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px;
+    max-width:46ch;
+    margin-top:20px;
+    color:rgba(243,239,227,0.86);
+  }
+  .hero-cta{
+    margin-top:32px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:13px 24px;
+    font-size:14.5px;
+    border-radius:2px;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--turf-dark);
+  }
+  .btn-primary:hover{background:#c19a3c;}
+  .btn-ghost{
+    border-color:rgba(243,239,227,0.4);
+    color:var(--cream);
+  }
+  .btn-ghost:hover{border-color:var(--cream);}
+
+  .scorecard{
+    background:var(--cream);
+    color:var(--ink);
+    padding:26px 28px;
+    border:1px solid var(--turf-dark);
+    box-shadow:8px 8px 0 rgba(0,0,0,0.18);
+  }
+  .scorecard .cap{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:12.5px;
+    color:var(--clay);
+    margin-bottom:14px;
+  }
+  .scorecard ul{list-style:none; margin:0; padding:0;}
+  .scorecard li{
+    display:flex; justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:15px;
+  }
+  .scorecard li:last-child{border-bottom:none;}
+  .scorecard .grade{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-weight:700; color:var(--turf);
+  }
+
+  /* Section headings */
+  .section{padding:66px 0;}
+  .section-head{
+    display:flex; align-items:baseline; justify-content:space-between;
+    margin-bottom:34px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:16px;
+  }
+  .section-head h2{font-size:29px;}
+  .section-head .sub{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:14px; color:#5b5b4f;
+  }
+
+  /* Category grid */
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  @media (max-width:900px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.cat-grid{grid-template-columns:1fr;}}
+  .cat-card{
+    background:var(--cream);
+    padding:26px 22px;
+    transition:background 0.15s ease;
+  }
+  .cat-card:hover{background:var(--sand);}
+  .cat-card .n{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:12px; color:var(--clay); margin-bottom:10px;
+  }
+  .cat-card h3{font-size:19px; line-height:1.25;}
+  .cat-card p{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:13.5px; color:#5b5b4f; margin-top:8px;
+  }
+
+  /* Featured picks */
+  .picks{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  @media (max-width:900px){.picks{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.picks{grid-template-columns:1fr;}}
+  .pick{
+    background:#fff;
+    border:1px solid var(--line);
+  }
+  .pick .thumb{
+    aspect-ratio:4/3;
+    background:
+      linear-gradient(135deg, var(--sand), var(--cream));
+    display:flex; align-items:center; justify-content:center;
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:12px; color:#8a8368; letter-spacing:.04em;
+    border-bottom:1px solid var(--line);
+  }
+  .pick-body{padding:18px 20px 22px;}
+  .pick-body .cat{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:11.5px; color:var(--clay); margin-bottom:8px;
+  }
+  .pick-body h3{font-size:18px; line-height:1.3;}
+  .pick-body .verdict{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:13.5px; color:#5b5b4f; margin:10px 0 16px;
+  }
+  .pick-body .go{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:13.5px; font-weight:700; color:var(--turf);
+    border-bottom:1px solid var(--turf);
+    padding-bottom:2px;
+  }
+
+  /* Ad slots */
+  .ad-slot{
+    margin:8px 0;
+    text-align:center;
+    min-height:100px;
+  }
+  .ad-label{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:10.5px; color:#8a8368; margin-bottom:6px; letter-spacing:.05em;
+  }
+
+  /* Trust strip */
+  .trust{
+    background:var(--turf-dark);
+    color:var(--cream);
+    padding:40px 0;
+  }
+  .trust .wrap{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+  }
+  @media (max-width:760px){.trust .wrap{grid-template-columns:1fr;}}
+  .trust h4{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:15px; margin-bottom:8px; color:var(--gold);
+  }
+  .trust p{
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:13.5px; color:rgba(243,239,227,0.78); margin:0;
+  }
+
+  /* Footer */
+  footer{
+    background:var(--turf);
+    color:rgba(243,239,227,0.72);
+    padding:44px 0 30px;
+    font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:13px;
+  }
+  footer .cols{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(243,239,227,0.16);
+  }
+  @media (max-width:760px){footer .cols{grid-template-columns:1fr 1fr;}}
+  footer h5{
+    color:var(--cream); font-size:13px; margin-bottom:12px;
+    letter-spacing:.02em;
+  }
+  footer ul{list-style:none; margin:0; padding:0;}
+  footer li{margin-bottom:8px;}
+  footer a:hover{color:var(--cream);}
+  .disclosure{
+    padding-top:20px;
+    font-size:12px;
+    color:rgba(243,239,227,0.55);
+    max-width:70ch;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <a href="https://aabanislam2k25-droid.github.io/" class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">Fairway <em>Verdict</em></span>
+    </a>
+    <nav class="primary">
+      <a href="https://aabanislam2k25-droid.github.io/drivers.html">Drivers</a>
+      <a href="https://aabanislam2k25-droid.github.io/irons.html">Irons</a>
+      <a href="https://aabanislam2k25-droid.github.io/putters.html">Putters</a>
+      <a href="https://aabanislam2k25-droid.github.io/balls.html">Balls</a>
+      <a href="https://aabanislam2k25-droid.github.io/wedges.html">Wedges</a>
+      <a href="https://aabanislam2k25-droid.github.io/rangefinders.html">Rangefinders</a>
+      <a href="https://aabanislam2k25-droid.github.io/bags.html">Bags</a>
+      <a href="https://aabanislam2k25-droid.github.io/shoes.html">Shoes</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1 class="display">Gear that actually<br>lowers your score.</h1>
+      <p class="lede">We compare drivers, irons, putters, and everything else in the bag against real swing data and real prices — so you can buy once and buy right.</p>
+      <div class="hero-cta">
+        <a href="#categories" class="btn btn-primary">Browse reviews</a>
+        <a href="https://aabanislam2k25-droid.github.io/drivers.html" class="btn btn-ghost">Best drivers 2026</a>
+      </div>
+    </div>
+    <div class="scorecard">
+      <div class="cap">THIS WEEK'S TOP VERDICTS</div>
+      <ul>
+        <li><span>Callaway Paradym Driver</span><span class="grade">A−</span></li>
+        <li><span>TaylorMade P790 Irons</span><span class="grade">A</span></li>
+        <li><span>Odyssey Putter</span><span class="grade">A−</span></li>
+        <li><span>Titleist Pro V1 (2025)</span><span class="grade">A</span></li>
+        <li><span>Garmin Approach Z30</span><span class="grade">B+</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="ad-slot">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2536967445389187"
+         data-ad-slot="0000000000"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="section" id="categories">
+    <div class="section-head">
+      <h2>Shop by category</h2>
+      <span class="sub">11 categories, updated monthly</span>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/drivers.html">
+        <div class="n">01</div>
+        <h3>Best golf driver reviews</h3>
+        <p>Distance, forgiveness, and feel across every price point.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/irons.html">
+        <div class="n">02</div>
+        <h3>Best iron set reviews</h3>
+        <p>Game-improvement to players' irons, tested head to head.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/balls.html">
+        <div class="n">03</div>
+        <h3>Best golf ball reviews</h3>
+        <p>Spin, compression, and value from tour to two-piece.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/putters.html">
+        <div class="n">04</div>
+        <h3>Best putter reviews</h3>
+        <p>Mallets and blades, rated on roll and feedback.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/wedges.html">
+        <div class="n">05</div>
+        <h3>Best wedges reviews</h3>
+        <p>Bounce, grind, and spin around the green.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/fairway-woods.html">
+        <div class="n">06</div>
+        <h3>Fairway woods &amp; hybrids</h3>
+        <p>The gap-fillers that keep the big miss out of play.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/rangefinders.html">
+        <div class="n">07</div>
+        <h3>Best rangefinder reviews</h3>
+        <p>Laser vs. GPS, slope-adjusted, tested on course.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/bags.html">
+        <div class="n">08</div>
+        <h3>Best golf bags reviews</h3>
+        <p>Stand, cart, and carry bags under real-round weight.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/shoes.html">
+        <div class="n">09</div>
+        <h3>Best golf shoes reviews</h3>
+        <p>Traction and comfort over eighteen walked holes.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/gloves-accessories.html">
+        <div class="n">10</div>
+        <h3>Gloves &amp; accessories</h3>
+        <p>The small stuff that quietly changes your round.</p>
+      </a>
+      <a class="cat-card" href="https://aabanislam2k25-droid.github.io/headcovers.html">
+        <div class="n">11</div>
+        <h3>Best golf headcovers</h3>
+        <p>Protection and style for your driver and woods.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Editor's picks</h2>
+      <span class="sub">Our current recommendation in each category</span>
+    </div>
+    <div class="picks">
+
+      <article class="pick">
+        <div class="thumb">CALLAWAY · DRIVER</div>
+        <div class="pick-body">
+          <div class="cat">Driver</div>
+          <h3>Callaway Paradym Driver</h3>
+          <p class="verdict">The most forgiving driver we tested this season — a strong pick for mid-handicappers who lose distance on off-center hits.</p>
+          <a class="go" href="https://www.amazon.com/Callaway-Paradym-Driver-Degrees-Standard/dp/B0FVB8LQHZ?linkCode=ll2&tag=kanta09-20&linkId=fc9832a36852c725d5551566a3d81ea3&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+      <article class="pick">
+        <div class="thumb">TAYLORMADE · IRONS</div>
+        <div class="pick-body">
+          <div class="cat">Iron set</div>
+          <h3>TaylorMade P790 Irons</h3>
+          <p class="verdict">Players'-distance irons with a soft, forged feel. Our top overall iron set for single-digit and low-mid handicaps.</p>
+          <a class="go" href="https://www.amazon.com/TaylorMade-P790-Irons-Steel-Handed/dp/B0DNTT9BCB?linkCode=ll2&tag=kanta09-20&linkId=f8fecb5a52b5ec27a54d37559f88863a&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+      <article class="pick">
+        <div class="thumb">TITLEIST · BALL</div>
+        <div class="pick-body">
+          <div class="cat">Golf ball</div>
+          <h3>Titleist Pro V1 (2025)</h3>
+          <p class="verdict">Still the benchmark tour ball: consistent flight, reliable greenside spin, and the number most amateurs trust without thinking twice.</p>
+          <a class="go" href="https://www.amazon.com/Titleist-Pro-V1-2025/dp/B0DPN7QZ9R?linkCode=ll2&tag=kanta09-20&linkId=3618486407729fff2d12905296ecdce8&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+      <article class="pick">
+        <div class="thumb">ODYSSEY · PUTTER</div>
+        <div class="pick-body">
+          <div class="cat">Putter</div>
+          <h3>Odyssey Putter</h3>
+          <p class="verdict">A stable, oversized mallet that's forgiving on mis-hits — the putter we recommend most often to three-putt-prone golfers.</p>
+          <a class="go" href="https://www.amazon.com/Odyssey-Putter-Right-Inches-Oversized/dp/B0DHSW1MRS?linkCode=ll2&tag=kanta09-20&linkId=ac683f9a843a17c84c89aa9ee8b727de&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+      <article class="pick">
+        <div class="thumb">CALLAWAY · WEDGE</div>
+        <div class="pick-body">
+          <div class="cat">Wedge</div>
+          <h3>Callaway Golf Wedge</h3>
+          <p class="verdict">Consistent groove bite and predictable bounce through the turf — our top pick for golfers rebuilding their short game.</p>
+          <a class="go" href="https://www.amazon.com/Callaway-Wedge-Degree-Right-Bounce-Steel/dp/B0D94YNNDF?linkCode=ll2&tag=kanta09-20&linkId=2d27c8f4e05d56803dc348d7d05081a5&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+      <article class="pick">
+        <div class="thumb">GARMIN · RANGEFINDER</div>
+        <div class="pick-body">
+          <div class="cat">Rangefinder</div>
+          <h3>Garmin Approach Z30</h3>
+          <p class="verdict">Laser-accurate with a built-in projected display — the rangefinder we reach for when a round is actually on the line.</p>
+          <a class="go" href="https://www.amazon.com/Garmin-Approach%C2%AE-Z30-Laser-Finder/dp/B0D79MK21G?linkCode=ll2&tag=kanta09-20&linkId=e7240ad936ad0b6996a4b536931d4c5f&language=en_US&ref_=as_li_ss_tl" rel="sponsored nofollow" target="_blank">See price on Amazon →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="ad-slot">
+    <div class="ad-label">ADVERTISEMENT</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2536967445389187"
+         data-ad-slot="0000000000"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+</main>
+
+<section class="trust">
+  <div class="wrap">
+    <div>
+      <h4>How we test</h4>
+      <p>Every review is built from spec comparisons, retailer data, and verified buyer feedback — cross-checked before it's published, not copied from a press release.</p>
+    </div>
+    <div>
+      <h4>No pay-for-placement</h4>
+      <p>Brands can't buy a better grade. We earn a commission if you buy through our links, but it never changes what we recommend.</p>
+    </div>
+    <div>
+      <h4>Updated monthly</h4>
+      <p>New releases and price drops get folded into the rankings every month, so a review from last season won't steer you wrong.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h5>Fairway Verdict</h5>
+        <p style="max-width:36ch;">Independent golf gear reviews and buying guides — drivers to headcovers, tested and ranked.</p>
+      </div>
+      <div>
+        <h5>Clubs</h5>
+        <ul>
+          <li><a href="https://aabanislam2k25-droid.github.io/drivers.html">Drivers</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/irons.html">Irons</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/putters.html">Putters</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/wedges.html">Wedges</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/fairway-woods.html">Fairway woods &amp; hybrids</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Gear</h5>
+        <ul>
+          <li><a href="https://aabanislam2k25-droid.github.io/balls.html">Golf balls</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/bags.html">Bags</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/shoes.html">Shoes</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/rangefinders.html">Rangefinders</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/gloves-accessories.html">Gloves &amp; accessories</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/headcovers.html">Headcovers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="https://aabanislam2k25-droid.github.io/about.html">About us</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/contact.html">Contact</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/privacy.html">Privacy policy</a></li>
+          <li><a href="https://aabanislam2k25-droid.github.io/disclosure.html">Affiliate disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclosure">Fairway Verdict is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate we earn from qualifying purchases. © 2026 Fairway Verdict.</p>
+  </div>
+</footer>
+
+</body>
+</html>
